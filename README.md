@@ -12,7 +12,7 @@
 * letters(length): 生成一个大小写字母组成的指定长度字符串
 
 ```js
-const {random} = require('commonTools');
+const {random} = require('zjtcommonTools');
 let data = random.letters(10);
 console.log('data: ', data);
 ```
@@ -20,7 +20,7 @@ console.log('data: ', data);
 * numbers(length): 生成一个数字组成的指定长度的字符串
 
 ```js
-const {random} = require('commonTools');
+const {random} = require('zjtcommonTools');
 let data = random.numbers(10);
 console.log('data: ', data);
 ```
