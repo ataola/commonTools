@@ -21,6 +21,28 @@ class Random {
     return this._generateRandom(NUMBERS, length);
   }
 
+  upSetArray(array, {sort} = {}) {
+    if (array instanceof Array) {
+      if (sort === 'asc') {
+        return array.sort((a, b) => {
+          return a < b ? -1 : 1;
+        });
+      } else if (sort === 'desc') {
+        return array.sort((a, b) => {
+          return a > b ? -1 : 1;
+        });
+      } else if(sort === 'random') {
+        return array.sort((a, b) => {
+          return Math.random() > .5 ? -1 : 1;
+        });
+      }else {
+        return array;
+      }
+    } else {
+      throw new Error('please input Array!');
+    }
+  }
+
   static createRandom() {
     return new Random();
   }

@@ -25,6 +25,17 @@ let data = random.numbers(10);
 console.log('data: ', data);
 ```
 
+* upSetArray(array, {sort}): 数组升序、降序、随机排序
+
+sort接收三个参数 `asc`, `desc`,`random`。
+
+```js
+const testArr = [2, 4, 3, 1, 10, 20, 7, 9, 66];
+console.log(random.upSetArray(testArr, {sort: 'asc'}).toString());
+console.log(random.upSetArray(testArr, {sort: 'desc'}).toString());
+console.log(random.upSetArray(testArr, {sort: 'random'}).toString());
+```
+
 ## Date
 
 关于日期相关的函数
@@ -43,7 +54,7 @@ console.log(date.timestampDuration(60000));
 console.log(date.timestampDuration(1000));
 ```
 
-* 日期转成 几分钟前 几小时前  昨天 前天  日期xxx
+* toString(): 日期转成 几分钟前 几小时前  昨天 前天  日期xxx
 
 ```js
 const {date} = require('zjtcommonTools');
@@ -51,7 +62,7 @@ const {date} = require('zjtcommonTools');
 console.log(date.toString("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时间)"));
 ```
 
-* 转成 YYYY-MM-DD HH:MM:SS 或者 YYYY/MM/DD HH:MM:SS
+* dateFormat(): 转成 YYYY-MM-DD HH:MM:SS 或者 YYYY/MM/DD HH:MM:SS
 ```js
 const {date} = require('zjtcommonTools');
 console.log(date.dateFormat("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时间)", 'YYYY-MM-DD')); //2020-05-06
