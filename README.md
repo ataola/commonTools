@@ -12,7 +12,7 @@
 * letters(length): 生成一个大小写字母组成的指定长度字符串
 
 ```js
-const {random} = require('zjtcommonTools');
+const {random} = require('zjtcommontools');
 let data = random.letters(10);
 console.log('data: ', data);
 ```
@@ -20,7 +20,7 @@ console.log('data: ', data);
 * numbers(length): 生成一个数字组成的指定长度的字符串
 
 ```js
-const {random} = require('zjtcommonTools');
+const {random} = require('zjtcommontools');
 let data = random.numbers(10);
 console.log('data: ', data);
 ```
@@ -45,7 +45,7 @@ console.log(random.upSetArray(testArr, {sort: 'random'}).toString());
 * timestampDuration(): 将时间戳转换成按天小时分钟秒格式的时间间隔格式
 
 ```js
-const {date} = require('zjtcommonTools');
+const {date} = require('zjtcommontools');
 
 console.log(date.timestampDuration(Date.now()));
 console.log(date.timestampDuration(86400000));
@@ -57,14 +57,14 @@ console.log(date.timestampDuration(1000));
 * toString(): 日期转成 几分钟前 几小时前  昨天 前天  日期xxx
 
 ```js
-const {date} = require('zjtcommonTools');
+const {date} = require('zjtcommontools');
 
 console.log(date.toString("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时间)"));
 ```
 
 * dateFormat(): 转成 YYYY-MM-DD HH:MM:SS 或者 YYYY/MM/DD HH:MM:SS
 ```js
-const {date} = require('zjtcommonTools');
+const {date} = require('zjtcommontools');
 console.log(date.dateFormat("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时间)", 'YYYY-MM-DD')); //2020-05-06
 console.log(date.dateFormat("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时间)", 'YYYY/MM/DD')); //2020/05/06
 ```
@@ -91,7 +91,7 @@ console.log(date.dateFormat("Wed May 06 2020 20:19:30 GMT+0800 (中国标准时�
 * sleep(millisecond), 延迟函数
 
 ```js
-const {utils} = require('zjtcommonTools');
+const {utils} = require('zjtcommontools');
 (async function() {
     console.log('action biu!')
     await utils.sleep(3000);
@@ -103,7 +103,7 @@ const {utils} = require('zjtcommonTools');
 initials是否支持首字母大小写， upper大写， lower小写
 
 ```js
-const {utils} = require('zjtcommonTools');
+const {utils} = require('zjtcommontools');
 const str = 'ataola';
 const str2 = 'hello world';
 const str3 = 'ATAOLA';
@@ -141,7 +141,7 @@ console.log(utils.formatSentence(str2, {
 * valueType(value) 值类型检测
 
 ```js
-const {utils} = require('zjtcommonTools');
+const {utils} = require('zjtcommontools');
 const str = 'hello world';
 const num = 2020;
 const bool = true;
